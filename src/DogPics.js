@@ -8,8 +8,8 @@ function DogPics() {
   useEffect(() => {
     console.log("useEffect");
     fetch("https://dog.ceo/api/breeds/image/random/3")
-      .then((r) => r.json())
-      .then((data) => {
+      .then(r => r.json())
+      .then(data => {
         console.log("setState");
         setImages(data.message);
       });
@@ -19,7 +19,7 @@ function DogPics() {
 
   return (
     <div>
-      {images.map((image) => (
+      {images.map(image => (
         <img src={image} key={image} />
       ))}
     </div>
